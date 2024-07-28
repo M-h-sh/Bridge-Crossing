@@ -8,56 +8,122 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <div class="container">
-        <h1 class="text-center my-4">Bridge Crossing Problem</h1>
-        <div class="mb-4">
-            <p>The problem: Four children (Andrew, Bianca, Charles and Diane) must cross a narrow bridge in the dark. They must share one torch, and the bridge can only carry two people at a time. Andrew can cross the bridge in one minute, Bianca needs two minutes, Charles needs six minutes and Diana needs nine minutes.</p>
-            <p>You have two objectives:</p>
-            <ul>
-                <li>How to get all the children safely across the bridge.</li>
-                <li>How to complete the crossing in the shortest time possible.</li>
-            </ul>
-            <p>Instructions:</p>
-            <p>You must give each instruction using a five character code:</p>
-            <ul>
-                <li>1st character - The initial of the slower child who carries the torch
-                    <ul>
-                        <li>Andrew = A, Bianca = B, Charles = C, Diane = D.</li>
-                    </ul>
-                </li>
-                <li>2nd character – The initial of the faster child who shares the torch
-                    <ul>
-                        <li>If one child crosses alone, then use “-“ to show there is no second child</li>
-                    </ul>
-                </li>
-                <li>3rd & 4th character – “X O” = Cross Over, “X B” = Cross Back</li>
-                <li>5th character – the number of minutes required for this crossing</li>
-            </ul>
-            <p>Sample instructions:</p>
-            <ul>
-                <li>To tell Bianca to cross over the bridge, the instruction is “B- X O 2”</li>
-                <li>To tell Andrew and Diane to cross back, the instruction is “D A X B 9”</li>
-            </ul>
-            <p>Finally you must report the total time taken. The format is “T O T” followed by two digits for the total time.</p>
-            <ul>
-                <li>If the total time was 25 minutes, the final report is “T O T 2 5”</li>
-            </ul>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Bridge Crossing</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#hero">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#instructions-section">Instructions</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div class="mb-4">
-            <label for="approachSelect" class="form-label">Select an Approach:</label>
-            <select id="approachSelect" class="form-select">
-                <option value="optimal">Optimal Solution</option>
-                <option value="alternative1">Alternative Solution 1</option>
-                <option value="alternative2">Alternative Solution 2</option>
-                <option value="alternative3">Alternative Solution 3</option>
-            </select>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="text-center  text-light d-flex align-items-center position-relative">
+        <video autoplay muted loop class="bg-video">
+            <source src="https://videos.pexels.com/video-files/5738617/5738617-hd_1920_1080_24fps.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="container py-5 text-overlay">
+            <h1 class="display-4">Bridge Crossing Problem</h1>
+            <p class="lead">Find the optimal way to get all children safely across the bridge in the shortest time</p>
         </div>
-        <button id="showInstructionsButton" class="btn btn-primary btn-block mb-2">Show Instructions</button>
-        <button id="toggleInstructionsButton" class="btn btn-secondary btn-block mb-4">Hide Instructions</button>
-        <div id="instructions" class="mb-4">
-            <!-- Instructions will be dynamically inserted here -->
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5 text-center">
+        <div class="container">
+            <h2>About</h2>
+            <p>This problem challenges you to find the most efficient way to get four children across a bridge in the dark. It's a classic puzzle that requires strategic thinking and planning.</p>
         </div>
-    </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-5 bg-light text-center">
+        <div class="container">
+            <h2>Services</h2>
+            <p>We provide engaging and educational puzzles and challenges to stimulate your mind and improve your problem-solving skills.</p>
+        </div>
+    </section>
+
+    <!-- Main Content Section -->
+    <main class="container my-5">
+        <!-- Problem Statement Section -->
+        <section id="problem-statement" class="mb-5 text-center">
+            <div class="card p-4">
+                <h2 class="mb-4">The Problem</h2>
+                <p>Four children (Andrew, Bianca, Charles, and Diane) must cross a narrow bridge in the dark. They must share one torch, and the bridge can only carry two people at a time. Andrew can cross the bridge in one minute, Bianca needs two minutes, Charles needs six minutes, and Diana needs nine minutes.</p>
+                <p>You have two objectives:</p>
+                <ul class="list-unstyled">
+                    <li>How to get all the children safely across the bridge.</li>
+                    <li>How to complete the crossing in the shortest time possible.</li>
+                </ul>
+                <p>Instructions:</p>
+                <ul class="list-unstyled">
+                    <li>1st character - The initial of the slower child who carries the torch: Andrew = A, Bianca = B, Charles = C, Diane = D.</li>
+                    <li>2nd character – The initial of the faster child who shares the torch: If one child crosses alone, then use “-“ to show there is no second child</li>
+                    <li>3rd & 4th character – “X O” = Cross Over, “X B” = Cross Back</li>
+                    <li>5th character – the number of minutes required for this crossing</li>
+                </ul>
+                <p>Sample instructions:</p>
+                <ul class="list-unstyled">
+                    <li>To tell Bianca to cross over the bridge, the instruction is “B- X O 2”</li>
+                    <li>To tell Andrew and Diane to cross back, the instruction is “D A X B 9”</li>
+                </ul>
+                <p>Finally, you must report the total time taken. The format is “T O T” followed by two digits for the total time.</p>
+                <ul class="list-unstyled">
+                    <li>If the total time was 25 minutes, the final report is “T O T 2 5”</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Instructions Section -->
+        <section id="instructions-section" class="text-center">
+            <div class="card p-4">
+                <h2 class="mb-4">Instructions</h2>
+                <div class="mb-4">
+                    <label for="approachSelect" class="form-label">Select an Approach:</label>
+                    <select id="approachSelect" class="form-select">
+                        <option value="optimal">Optimal Solution</option>
+                        <option value="alternative1">Alternative Solution 1</option>
+                        <option value="alternative2">Alternative Solution 2</option>
+                        <option value="alternative3">Alternative Solution 3</option>
+                    </select>
+                </div>
+                <div class="d-grid gap-2">
+                    <button id="toggleInstructionsButton" class="btn btn-primary mb-2">Show Instructions</button>
+                </div>
+                <div id="instructions" class="instructions-content" style="display: none;">
+                    <!-- Instructions will be dynamically inserted here -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer-section text-center py-3">
+        <div class="container">
+            <p>&copy; 2024 Bridge Crossing Problem. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

@@ -1,25 +1,47 @@
 body {
-    background-color: #f8f9fa;
     font-family: Arial, sans-serif;
 }
 
-h1 {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
+.navbar {
+    background-color: #f8f9fa;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-p, ul {
-    font-size: 1.1rem;
-    line-height: 1.5;
+#hero {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-#instructions {
-    font-size: 1.25rem;
-    line-height: 1.5;
-}
-
-.btn-block {
+.bg-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
     width: 100%;
-    padding: 0.75rem;
-    font-size: 1.25rem;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.text-overlay {
+    z-index: 1;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+#about, #services, #problem-statement, #instructions-section {
+    padding: 60px 0;
+}
+
+.footer-section {
+    background-color: #f8f9fa;
+}
+
+.card {
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
