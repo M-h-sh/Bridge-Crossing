@@ -1,0 +1,25 @@
+body {
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+p, ul {
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+#instructions {
+    font-size: 1.25rem;
+    line-height: 1.5;
+}
+
+.btn-block {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1.25rem;
+}
